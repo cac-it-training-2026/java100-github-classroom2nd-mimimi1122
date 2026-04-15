@@ -19,7 +19,7 @@ public class Patisserie {
 		System.out.println("たいへんお待たせしました。");
 		System.out.println("【ポエール・エルメ】");
 		System.out.println("ただいまより開店です！！");
-
+		//test
 	}
 
 }
