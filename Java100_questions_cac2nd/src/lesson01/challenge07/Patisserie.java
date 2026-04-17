@@ -93,7 +93,7 @@ public class Patisserie {
 		choko = (int) (choko - choko3);
 		pis = (int) (pis - pis3);
 
-		System.out.println("本日のおすすめ商品です。\n");
+		System.out.println("\n本日のおすすめ商品です。\n");
 		System.out.println("シトロン   		\\250 ・・・ 残り" + (int) sit + "個");
 		System.out.println("ショコラ   		\\280 ・・・ 残り" + (int) choko + "個");
 		System.out.println("ピスターシュ   	\\320 ・・・ 残り" + (int) pis + "個");
