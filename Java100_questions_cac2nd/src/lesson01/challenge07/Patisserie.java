@@ -84,19 +84,19 @@ public class Patisserie {
 		double totalp = 250 * sit3 + 280 * choko3 + 320 * pis3;
 
 		System.out.println("\n合計個数     " + totalc + "個");
-		System.out.println("\n合計金額     " + totalp + "円");
+		System.out.println("\n合計金額     " + (int) totalp + "円");
 
 		System.out.println("\nをお買いあげですね。");
 		System.out.println("承りました。");
 
-		sit = sit - sit3;
-		choko = choko - choko3;
-		pis = pis - pis3;
+		sit = (int) (sit - sit3);
+		choko = (int) (choko - choko3);
+		pis = (int) (pis - pis3);
 
 		System.out.println("本日のおすすめ商品です。\n");
-		System.out.println("シトロン   		\\250 ・・・ 残り" + sit + "個");
-		System.out.println("ショコラ   		\\280 ・・・ 残り" + choko + "個");
-		System.out.println("ピスターシュ   	\\320 ・・・ 残り" + pis + "個");
+		System.out.println("シトロン   		\\250 ・・・ 残り" + (int) sit + "個");
+		System.out.println("ショコラ   		\\280 ・・・ 残り" + (int) choko + "個");
+		System.out.println("ピスターシュ   	\\320 ・・・ 残り" + (int) pis + "個");
 	}
 
 }
