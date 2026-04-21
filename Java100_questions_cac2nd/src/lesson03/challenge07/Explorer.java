@@ -83,10 +83,44 @@ public class Explorer {
 
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
+		//ここにwhile文、if文を利用した処理を記術
+		while (i < 3) {
+			System.out.println("隊長：");
+			System.out.println("どの手を出して通り抜けますか");
+			System.out.print("（グー… 1 : チョキ… 2 : パー… 3）＞");
 
-		//ここにwhile文、if文を利用した処理を記述
+			// 入力を受け取る
+			hand = Integer.parseInt(br.readLine());
 
+			System.out.println();
+			// 範囲外の手が入力された場合の処理
+			if (hand < 1 || hand > 3) {
+				System.out.println("隊長：");
+				System.out.println("そんな手はありませんよ。もう一度入れてください。\n");
+				continue; // ワニの数をカウントさせず、ループの最初に戻る
+			}
 
+			// ワニの種類をランダムに決定 (1〜3の乱数を作る)
+			alligator = (int) (Math.random() * 3) + 1;
+
+			// ワニの正体を判定して表示
+			System.out.println("隊長：");
+			if (alligator == 1) {
+				System.out.println("相手はグーワニでした。");
+			} else if (alligator == 2) {
+				System.out.println("相手はチョキワニでした。");
+			} else if (alligator == 3) {
+				System.out.println("相手はパーワニでした。");
+			}
+
+			// 負ける条件: (自分グー1 ＆ 相手パー3) または (自分チョキ2 ＆ 相手グー1) または (自分パー3 ＆ 相手チョキ2)
+			if ((hand == 1 && alligator == 3) || (hand == 2 && alligator == 1) || (hand == 3 && alligator == 2)) {
+				break; // 負けた場合はループを強制終了（下部の「通り抜けに失敗しました...」へ繋がる）
+			} else {
+				i++; // 勝ち、または引き分け（あいこ）なら通過数を1増やす
+				System.out.println(i + "匹目通り抜け成功！\n");
+			}
+		}
 		if (i == 3) {
 			System.out.println("隊長：");
 			System.out.println("川を渡り切りました。");
