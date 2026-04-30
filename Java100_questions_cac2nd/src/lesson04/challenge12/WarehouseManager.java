@@ -99,9 +99,22 @@ public class WarehouseManager {
 
 		System.out.println("\n\nでした。直してきます...\n");
 
-
 		//ここに適切な値の挿入処理を記述する
+		int element = 0;
+		int total = 0;
+		for (int i = 0; i < wonderfulArray.length; i++) {
+			//			もし、配列の中が0ならその番地iをelementに記録する
+			if (wonderfulArray[i] == 0) {
+				element = i;
+			} else {
+				//				0以外ならば、totalに配列の中の数宇を加算
+				total += wonderfulArray[i];
 
+			}
+		}
+		//		配列の中で0だった値を15-totalの値に変更
+		//		1から5を足した数は15であるため、15からtotalを引くと使用されていない値が分かる
+		wonderfulArray[element] = (15 - total);
 
 		System.out.println("Yさん：");
 		System.out.println("直してきました。\n");
