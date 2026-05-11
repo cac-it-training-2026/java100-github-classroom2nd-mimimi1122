@@ -64,6 +64,7 @@ class Retainer extends Samurai {
 		System.out.println("年貢を取り立てるよ～。");
 	}
 
+	@Override
 	public String toString() {
 		return "拙者は" + domain + "藩士、" + name + "ともうす。";
 	}

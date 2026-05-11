@@ -60,14 +60,14 @@ class Retainer extends Samurai {
 	}
 
 	public boolean equals(Object object) {
-		boolean isMatch;
+		boolean Match;
 		Retainer retainer = (Retainer) object;
 		if (this.domain.equals(retainer.domain)) {
-			isMatch = true;
+			Match = true;
 		} else {
-			isMatch = false;
+			Match = false;
 		}
-		return isMatch;
+		return Match;
 	}
 }
 
@@ -90,6 +90,7 @@ class Ronin extends Samurai {
 		System.out.println("傘張るよ～。");
 	}
 
+	@Override
 	public String toString() {
 		return "拙者は武州○△□村の浪人、" + name + "ともうす。";
 	}
